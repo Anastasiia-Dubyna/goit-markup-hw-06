@@ -641,9 +641,6 @@ img {
     justify-content: space-between;
 }
 
-.footer-form-subc {
-    display: flex;
-}
 
 .footer-input {
     width: 264px;
@@ -719,7 +716,7 @@ img {
     background-color: #FCFCFC;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    padding: 24px;
+    padding: 72px 24px 24px;
     transition: transform var(--transf) ;
 }
 
@@ -732,17 +729,22 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: auto;
-    margin-bottom: 24px;
+    position: absolute;
     padding: 0;
     width: 24px;
     height: 24px;
     top: 24px;
-    left: 360px;
+    right: 24px;
     background: #E7E9FC;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
+    transition: background-color var(--transf), fill var(--transf);
+}
+
+.modal-button:is(:hover, :focus) {
     cursor: pointer;
+    background-color: var(--accent-color);
+    fill: var(--white-color);
 }
 
 .is-hidden {
@@ -758,6 +760,7 @@ img {
     text-align: center;
     letter-spacing: 0.02em;
     color: var(--secondary-text-color); 
+    margin-bottom: 16px;
 }
 
 .modal-field {
@@ -802,6 +805,7 @@ img {
     letter-spacing: 0.04em;
     color:#8E8F99;
     display: inline-block;
+    margin-bottom: 4px;
 }
 
 .modal-textarea {
@@ -869,7 +873,8 @@ img {
 }
 
 .modal-form-submit {
-    display: flex;
+    display: block;
+    margin: 0 auto;
     width: 169px;
     height: 56px;
     border: none;
@@ -877,13 +882,9 @@ img {
     font-weight: 500;
     font-size: 16px;
     padding: 16px 32px;
-    gap: 10px;
     margin-top: 24px;
-    margin-left: 50%;
-    transform: translateX(-50%);
     line-height: 1.5;
     letter-spacing: 0.04em;
-    justify-content: center;
     color: var(--white-color);
     background: var(--primary-brand-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
